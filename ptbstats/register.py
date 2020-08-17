@@ -26,7 +26,7 @@ def register_stats(stats: BaseStats,
     :meth:`set_dispatcher`:
 
     1. The :attr:`stats` handler. By default, each of those handlers will get it's own group,
-        starting with -10e-42. That should be enough to not interfere with your other handlers.
+        starting with -10e10. That should be enough to not interfere with your other handlers.
     2. A :class:`telegram.ext.CommandHandler` that will listen for :attr:`command` and call
        :meth:`stats.reply_statistics` to report the current statistics. By default, all those
        command handlers will be added to group 0. If you register the statsistics before your other
