@@ -1,7 +1,7 @@
 PTB Stats
 =========
 
-.. image:: https://img.shields.io/badge/python-3-blue
+.. image:: https://img.shields.io/badge/python-3.7+-blue
    :target: https://www.python.org/doc/versions/
    :alt: Supported Python versions
 
@@ -20,7 +20,7 @@ Installation
 
 Install via::
 
-    pip install git+https://gitlab.com/HirschHeissIch/ptbstats.git
+    pip install git+https://gitlab.com/HirschHeissIch/ptbstats.git@v1.2
 
 ``ptbstats`` does not have a proper package (yet), because the author is too lazy for unittests and stuff …
 
@@ -47,7 +47,7 @@ Here is an example setup using the very basic `SimpleStats <https://hirschheissi
         register_stats(SimpleStats('text', lambda u: bool(u.message and
                                                           (Filters.text & ~ Filters.command)(u))))
         # Count number of inline queries
-        register_stats(SimpleStats('ilq', lambda u: bool(u.inline_query)))
+        register_stats(SimpleStats('ilq', lambda u: bool(u.inline_query and u.inline_query.query)))
 
         # Register handlers
         updater.dispatcher.add_handler(ExampleHandler)
