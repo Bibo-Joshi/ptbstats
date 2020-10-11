@@ -2,6 +2,7 @@
 """Module containing some implementations of :class:`ptbstats.BaseStats`."""
 import datetime as dtm
 import os
+import time
 from dataclasses import dataclass, field
 
 import plotly.graph_objects as go
@@ -24,6 +25,7 @@ class Record:
 
 class SimpleStats(BaseStats):
     """Simple implementation of :class:`ptbstats.BaseStats` collecting records per day and user.
+    The command callback will run asynchronously.
 
     Attributes:
         command: The command that produces the statistics associated with this instance.
@@ -37,7 +39,7 @@ class SimpleStats(BaseStats):
     """
 
     def __init__(self, command: str, check_update: Callable[[Update], Optional[bool]]) -> None:
-        super().__init__(command=command)
+        super().__init__(command=command, async_command=True)
         self.records: Dict[dtm.date, Record] = dict()
         self._check_update = check_update
 
@@ -86,14 +88,21 @@ class SimpleStats(BaseStats):
             update: The :class:`telegram.Update`.
             context: The :class:`telegram.ext.CallbackContext`
         """
+        promise = context.dispatcher.run_async(self._reply_statistics,
+                                               update,
+                                               context,
+                                               update=update)
+        while not promise.done.is_set():
+            # Send ChatAction, as file generation takes a moment
+            update.effective_chat.send_action(ChatAction.UPLOAD_DOCUMENT)
+            time.sleep(4.5)
+
+    def _reply_statistics(self, update: Update, context: CallbackContext) -> None:
         self.fill()
 
         if not (self.records and [bool(d) for d in self.records.values()]):
             update.effective_message.reply_text('No data to show.')
             return
-
-        # Send ChatAction, as file generation takes a moment
-        update.effective_chat.send_action(ChatAction.UPLOAD_DOCUMENT)
 
         # get the data
         dates = list(self.records.keys())
@@ -117,9 +126,6 @@ class SimpleStats(BaseStats):
         # Set y-axes titles
         fig.update_yaxes(title_text='Number of different users', secondary_y=False)
         fig.update_yaxes(title_text='Number of received queries', secondary_y=True)
-
-        # Send ChatAction again, jus in case
-        update.effective_chat.send_action(ChatAction.UPLOAD_DOCUMENT)
 
         # Save and send the file
         with TemporaryDirectory() as dir:

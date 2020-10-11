@@ -2,6 +2,16 @@
 Changelog
 =========
 
+Version 1.3
+===========
+*Released 2020-10-11*
+
+**Major changes:**
+
+* Upgrade to PTB v13.0
+* Add options to ``BaseStats`` to run ``process_update`` and/or ``reply_statistics`` asynchronously
+* Run ``SimpleStats.reply_statistics`` asynchronously and improve sending of ``ChatAction``.
+
 Version 1.2
 ===========
 *Released 2020-08-24*

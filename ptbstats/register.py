@@ -68,6 +68,9 @@ def register_stats(stats: BaseStats,
 
     # Register command Handler
     filters = Filters.user(user_id=admin_id) if admin_id else None
-    handler = CommandHandler(stats.command, stats.reply_statistics, filters=filters)
+    handler = CommandHandler(stats.command,
+                             stats.reply_statistics,
+                             filters=filters,
+                             run_async=stats.async_command)
     constants.DISPATCHER.add_handler(handler,
                                      group=command_group or constants.COMMAND_HANDLER_GROUP)

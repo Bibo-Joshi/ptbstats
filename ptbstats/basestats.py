@@ -15,9 +15,15 @@ class BaseStats(Handler, ABC):
 
     Attributes:
         command: The command that produces the statistics associated with this instance.
+        async_command: Whether :meth:`reply_statistics` should be run asynchronously using
+            :meth:`telegram.ext.Disptacher.run_async`.
 
     Args:
         command: The command that should produce the statistics associated with this instance.
+        async_stats: Whether the :meth:`process_update` should be run asynchronously using
+            :meth:`telegram.ext.Disptacher.run_async`. Defaults to :obj:`False`.
+        async_command: Whether :meth:`reply_statistics` should be run asynchronously using
+            :meth:`telegram.ext.Disptacher.run_async`. Defaults to :obj:`False`.
 
     Warning:
         :attr:`command` must not appear twice between statistics instances!
@@ -33,9 +39,10 @@ class BaseStats(Handler, ABC):
         instance.check_update = check_update
         return instance
 
-    def __init__(self, command: str):
-        super().__init__(callback=self._callback)
+    def __init__(self, command: str, async_stats: bool = False, async_command: bool = False):
+        super().__init__(callback=self._callback, run_async=async_stats)
         self.command = command
+        self.async_command = async_command
 
     @abstractmethod
     def check_update(self, update: Update) -> Optional[bool]:
