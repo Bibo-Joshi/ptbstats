@@ -2,6 +2,15 @@
 Changelog
 =========
 
+Version 1.3.1
+=============
+*Released 2021-02-25*
+
+**Minor changes for ``SimpleStats``:**
+
+* Send data as HTML instead of PDF
+* Drop ``kaleido`` dependency
+
 Version 1.3
 ===========
 *Released 2020-10-11*

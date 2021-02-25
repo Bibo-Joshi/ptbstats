@@ -5,7 +5,7 @@ PTB Stats
    :target: https://www.python.org/doc/versions/
    :alt: Supported Python versions
 
-.. image:: https://img.shields.io/badge/python--telegram--bot-v12.4+-blue
+.. image:: https://img.shields.io/badge/python--telegram--bot->%3D13.0%2C<14.0-blue
    :target: https://python-telegram-bot.org/
    :alt: Supported PTB versions
 
@@ -20,7 +20,7 @@ Installation
 
 Install via::
 
-    pip install git+https://gitlab.com/HirschHeissIch/ptbstats.git@v1.2
+    pip install git+https://gitlab.com/HirschHeissIch/ptbstats.git@v1.3.1
 
 ``ptbstats`` does not have a proper package (yet), because the author is too lazy for unittests and stuff …
 

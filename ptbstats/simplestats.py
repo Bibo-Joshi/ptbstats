@@ -1,14 +1,13 @@
 #!/usr/bin/env python
 """Module containing some implementations of :class:`ptbstats.BaseStats`."""
 import datetime as dtm
-import os
 import time
+from io import StringIO
 from dataclasses import dataclass, field
 
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-from tempfile import TemporaryDirectory
 from typing import Optional, Dict, Any, Callable, Generator, Set
 
 from telegram import Update, ChatAction
@@ -42,29 +41,35 @@ class SimpleStats(BaseStats):
         super().__init__(command=command, async_command=True)
         self.records: Dict[dtm.date, Record] = dict()
         self._check_update = check_update
+        self._last_filled: Optional[dtm.date] = None
 
     def check_update(self, update: Update) -> Optional[bool]:
         return bool(self._check_update(update))
+
+    @staticmethod
+    def _date_range(date1: dtm.date, date2: dtm.date) -> Generator[dtm.date, None, None]:
+        for n in range(int((date2 - date1).days) + 1):
+            yield date1 + dtm.timedelta(n)
 
     def fill(self) -> None:
         """
         Fills empty dates since the last record with zeros.
         """
 
-        def date_range(date1: dtm.date, date2: dtm.date) -> Generator[dtm.date, None, None]:
-            for n in range(int((date2 - date1).days) + 1):
-                yield date1 + dtm.timedelta(n)
-
         today = dtm.date.today()
+        if self._last_filled is not None and today <= self._last_filled:
+            return
 
         if not self.records:
             self.records[today] = Record()
 
         # Fill gaps in records with zeros
         dates = list(self.records.keys())
-        for d in date_range(dates[-1], today):
+        for d in self._date_range(dates[-1], today):
             if d not in self.records:
                 self.records[d] = Record()
+
+        self._last_filled = today
 
     def process_update(self, update: Update) -> None:
         """
@@ -106,8 +111,8 @@ class SimpleStats(BaseStats):
 
         # get the data
         dates = list(self.records.keys())
-        number_users = [len(r.user_ids) for r in self.records.values()]
-        number_queries = [r.queries for r in self.records.values()]
+        number_users = list(len(r.user_ids) for r in self.records.values())
+        number_queries = list(r.queries for r in self.records.values())
 
         # Create figure with secondary y-axis
         fig = make_subplots(specs=[[{"secondary_y": True}]])
@@ -128,11 +133,11 @@ class SimpleStats(BaseStats):
         fig.update_yaxes(title_text='Number of received queries', secondary_y=True)
 
         # Save and send the file
-        with TemporaryDirectory() as dir:
-            filename = os.path.join(dir, f'{self.command}.pdf')
-            fig.write_image(filename)
+        stream = StringIO()
+        fig.write_html(stream)
+        stream.seek(0)
 
-            update.effective_message.reply_document(open(filename, 'rb'))
+        update.effective_message.reply_document(stream, filename=f'{self.command}.html')
 
     def persistent_data(self) -> Dict[str, Any]:
         """
