@@ -85,11 +85,11 @@ html_favicon = '../../logo/ptb_stats.ico'
 
 # Link to the correct file
 html_context = {
-    "display_gitlab": True,
-    "gitlab_host": "gitlab.com",
-    "gitlab_user": "HirschHeissIch",
-    "gitlab_repo": 'ptbstats',
-    "gitlab_version": "master",
+    "display_github": True,
+    "github_host": "github.com",
+    "github_user": "HirschHeissIch",
+    "github_repo": 'ptbstats',
+    "github_version": "master",
     "conf_py_path": "/docs/source/",
     "source_suffix": '.rst',
 }

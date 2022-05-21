@@ -10,7 +10,7 @@ PTB Stats
    :alt: Supported PTB versions
 
 .. image:: https://img.shields.io/badge/documentation-is%20here-orange
-   :target: https://hirschheissich.gitlab.io/ptbstats/
+   :target: https://Bibo-Joshi.github.io/ptbstats/
    :alt: Documentation
 
 A simple statistics plugin for Telegram bots build with the python-telegram-bot library
@@ -20,14 +20,14 @@ Installation
 
 Install via::
 
-    pip install git+https://gitlab.com/HirschHeissIch/ptbstats.git@v1.3.1
+    pip install git+https://github.com/HirschHeissIch/ptbstats.git@v1.3.1
 
 ``ptbstats`` does not have a proper package (yet), because the author is too lazy for unittests and stuff …
 
 Quickstart
 ----------
 
-Here is an example setup using the very basic `SimpleStats <https://hirschheissich.gitlab.io/ptbstats/ptbstats.simplestats.html>`_ statistics instance delivered along with ``ptbstats``.
+Here is an example setup using the very basic `SimpleStats <https://Bibo-Joshi.github.io/ptbstats/ptbstats.simplestats.html>`_ statistics instance delivered along with ``ptbstats``.
 
 .. code-block:: python
 
@@ -63,4 +63,4 @@ Here is an example setup using the very basic `SimpleStats <https://hirschheissi
 Advanced Usage
 --------------
 
-To create your own, customized statistics, subclass `BaseStats <https://hirschheissich.gitlab.io/ptbstats/ptbstats.basestats.html>`_.
+To create your own, customized statistics, subclass `BaseStats <https://Bibo-Joshi.github.io/ptbstats/ptbstats.basestats.html>`_.

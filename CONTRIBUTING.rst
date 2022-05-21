@@ -4,20 +4,20 @@ How To Contribute
 Setting things up
 -----------------
 
-1. Fork the ``ptbstats`` repository to your GitLab account.
+1. Fork the ``ptbstats`` repository to your github account.
 
 2. Clone your forked repository of ``ptbstats`` to your computer:
 
    .. code-block:: bash
 
-      $ git clone https://gitlab.com/<your username>/ptbstats --recursive
+      $ git clone https://github.com/<your username>/ptbstats --recursive
       $ cd ptbstats
 
 3. Add a track to the original repository:
 
    .. code-block:: bash
 
-      $ git remote add upstream https://gitlab.com/HirschHeissIch/ptbstats
+      $ git remote add upstream https://github.com/HirschHeissIch/ptbstats
 
 4. Install dependencies:
 
@@ -101,7 +101,7 @@ Here's how to make a one-off code change.
 
         $ git add your-file-changed.py
 
-   - Finally, push it to your GitLab fork, run:
+   - Finally, push it to your github fork, run:
 
      .. code-block:: bash
 
@@ -109,7 +109,7 @@ Here's how to make a one-off code change.
 
 4. **When your feature is ready to merge, create a pull request.**
 
-   - Go to your fork on GitLab, select your branch from the dropdown menu, and click "New merge request".
+   - Go to your fork on github, select your branch from the dropdown menu, and click "New merge request".
 
    - Add a descriptive comment explaining the purpose of the branch. This will tell the reviewer what the purpose of the branch is.
 
@@ -137,7 +137,7 @@ Here's how to make a one-off code change.
 
    - At the end, the reviewer will merge the pull request.
 
-6. **Tidy up!** Delete the feature branch from both your local clone and the GitLab repository:
+6. **Tidy up!** Delete the feature branch from both your local clone and the github repository:
 
    .. code-block:: bash
 
@@ -206,11 +206,11 @@ break the API classes. For example:
        self.last_name = last_name
 
 
-.. _`issue tracker`: https://gitlab.com/HirschHeissIch/ptbstats/-/issues
+.. _`issue tracker`: https://github.com/HirschHeissIch/ptbstats/-/issues
 .. _`developer' mailing list`: ptbstats@mahlerhome.de
 .. _`PEP 8 Style Guide`: https://www.python.org/dev/peps/pep-0008/
 .. _`sphinx`: http://sphinx-doc.org
-.. _`Google Python Style Guide`: http://google.gitlab.io/styleguide/pyguide.html
+.. _`Google Python Style Guide`: http://google.github.io/styleguide/pyguide.html
 .. _`Google Python Style Docstrings`: https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html
 .. _`MyPy`: https://mypy.readthedocs.io/en/stable/index.html
 .. _`here`: https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html

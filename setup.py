@@ -31,7 +31,7 @@ with codecs.open('README.rst', 'r', 'utf-8') as fd:
           version=__version__,  # noqa: F821
           author='Hinrich Mahler',
           author_email='ptbstats@mahlerhome.de',
-          url='https://hirschheissich.gitlab.io/ptbstats/',
+          url='https://Bibo-Joshi.github.io/ptbstats/',
           keywords='python-telegram-bot statistics plugin',
           description="A simple statistics plugin for Telegram bots build with the "
                       "python-telegram-bot library",
