@@ -39,13 +39,13 @@ class SimpleStats(BaseStats[_CCT]):
             on that day. ``queries`` is the total amount of recorded queries on that day.
     """
 
-    def __init__(self, command: str, check_update: Callable[[Update], Optional[bool]]) -> None:
+    def __init__(self, command: str, check_update: Callable[[object], Optional[bool]]) -> None:
         super().__init__(command=command, block_command=False)
         self.records: Dict[dtm.date, _Record] = {}
         self._check_update = check_update
         self._last_filled: Optional[dtm.date] = None
 
-    def check_update(self, update: Update) -> Optional[bool]:
+    def check_update(self, update: object) -> Optional[bool]:
         """See :meth:`ptbstats.BaseStats.check_update`."""
         return bool(self._check_update(update))
 
@@ -80,7 +80,7 @@ class SimpleStats(BaseStats[_CCT]):
         """
         self._fill()
         today = dtm.date.today()
-        self.records[today].user_ids.add(update.effective_user.id)
+        self.records[today].user_ids.add(update.effective_user.id)  # type: ignore[union-attr]
         self.records[today].queries += 1
 
     async def reply_statistics(self, update: Update, context: CallbackContext) -> None:
@@ -95,14 +95,18 @@ class SimpleStats(BaseStats[_CCT]):
         task = context.application.create_task(self._reply_statistics(update), update=update)
         while not task.done():
             # Keep sending the chat action as long as the task is not completed
-            await update.effective_chat.send_action(ChatAction.UPLOAD_DOCUMENT)
+            await update.effective_chat.send_action(  # type: ignore[union-attr]
+                ChatAction.UPLOAD_DOCUMENT
+            )
             await asyncio.wait_for(task, 4.5)
 
     async def _reply_statistics(self, update: Update) -> None:
         self._fill()
 
         if not (self.records and all(self.records.values())):
-            await update.effective_message.reply_text("No data to show.")
+            await update.effective_message.reply_text(  # type: ignore[union-attr]
+                "No data to show."
+            )
             return
 
         # get the data
@@ -133,7 +137,7 @@ class SimpleStats(BaseStats[_CCT]):
         fig.write_html(stream)
         stream.seek(0)
 
-        await update.effective_message.reply_document(
+        await update.effective_message.reply_document(  # type: ignore[union-attr]
             stream.read().encode("utf-8"), filename=f"{self.command}.html"
         )
 

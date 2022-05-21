@@ -48,7 +48,7 @@ class BaseStats(Handler[Update, _CCT], ABC):
         self.store_data(context)
 
     @abstractmethod
-    def check_update(self, update: Update) -> Optional[bool]:
+    def check_update(self, update: object) -> Optional[bool]:
         """
         This method is called to determine if an update should be processed by this statistics
         instance. It must always be overridden.
