@@ -2,11 +2,19 @@
 Changelog
 =========
 
+Version 2.0
+===========
+*Released 2022-05-21*
+
+**Major changes:**
+    * Upgrades to ``python-telegram-bot`` v20.0a0, introducing ``asyncio``. Not backwards compatible.
+    * Persistence interface of ``BaseStats`` was completely reworked and is not backwards compatible.
+
 Version 1.3.1
 =============
 *Released 2021-02-25*
 
-**Minor changes for ``SimpleStats``:**
+**Minor changes for SimpleStats:**
 
 * Send data as HTML instead of PDF
 * Drop ``kaleido`` dependency

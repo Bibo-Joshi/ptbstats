@@ -15,9 +15,3 @@ Below you can find a reference of all the classes and methods in ``ptbstats``.
    :maxdepth: 2
 
    changelog
-
-.. toctree::
-   :hidden:
-   :maxdepth: 2
-
-   contributing
