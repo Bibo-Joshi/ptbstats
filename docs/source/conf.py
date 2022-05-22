@@ -22,8 +22,8 @@ project = "PTB Stats"
 copyright = "2020, Hinrich Mahler"
 author = "Hinrich Mahler"
 master_doc = "index"
-version = "2.0"
-release = "2.0"
+version = "2.0.1"
+release = "2.0.1"
 
 
 # -- General configuration ---------------------------------------------------
