@@ -98,7 +98,10 @@ class SimpleStats(BaseStats[_CCT]):
             await update.effective_chat.send_action(  # type: ignore[union-attr]
                 ChatAction.UPLOAD_DOCUMENT
             )
-            await asyncio.wait_for(task, 4.5)
+            try:
+                await asyncio.wait_for(task, 4.5)
+            except asyncio.TimeoutError:
+                pass
 
     async def _reply_statistics(self, update: Update) -> None:
         self._fill()
