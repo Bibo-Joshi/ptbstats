@@ -2,7 +2,13 @@
 Changelog
 =========
 
-Version 2.0.1
+Version 2.0.2
+=============
+*Released 2022-05-22*
+
+* Fix a bug in ``SimpleStats``
+
+Version 2.0.2
 =============
 *Released 2022-05-22*
 

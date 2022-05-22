@@ -23,7 +23,7 @@ requirements = requirements()
 
 setup(
     name="ptbstats",
-    version="2.0.1",
+    version="2.0.2",
     author="Hinrich Mahler",
     author_email="ptbstats@mahlerhome.de",
     url="https://Bibo-Joshi.github.io/ptbstats/",

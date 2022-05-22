@@ -24,7 +24,7 @@ Installation
 
 Install via::
 
-    pip install git+https://github.com/Bibo-Joshi/ptbstats.git@v2.0.1
+    pip install git+https://github.com/Bibo-Joshi/ptbstats.git@v2.0.2
 
 ``ptbstats`` does not have a proper package (yet), because the author is too lazy for unittests and stuff …
 

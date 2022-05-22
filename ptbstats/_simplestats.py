@@ -95,11 +95,13 @@ class SimpleStats(BaseStats[_CCT]):
         task = context.application.create_task(self._reply_statistics(update), update=update)
         while not task.done():
             # Keep sending the chat action as long as the task is not completed
-            await update.effective_chat.send_action(  # type: ignore[union-attr]
-                ChatAction.UPLOAD_DOCUMENT
+            context.application.create_task(
+                update.effective_chat.send_action(  # type: ignore[union-attr]
+                    ChatAction.UPLOAD_DOCUMENT
+                )
             )
             try:
-                await asyncio.wait_for(task, 4.5)
+                await asyncio.wait_for(asyncio.shield(task), 4.5)
             except asyncio.TimeoutError:
                 pass
 
