@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="ptbstats.SimpleStats" href="ptbstats.simplestats.html" /><link rel="prev" title="ptbstats package" href="ptbstats.html" />
 
-    <link rel="shortcut icon" href="_static/ptb_stats.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
+    <link rel="shortcut icon" href="_static/ptb_stats.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2022.06.21"/>
         <title>ptbstats.BaseStats - PTB Stats 2.0.2 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -184,7 +184,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -224,16 +225,19 @@ Defaults to <a class="reference external" href="https://docs.python.org/3/librar
 <span class="sig-name descname"><span class="pre">command</span></span><a class="headerlink" href="#ptbstats.BaseStats.command" title="Permalink to this definition">#</a></dt>
 <dd><p>The command that produces the statistics associated with this instance.</p>
 </dd></dl>
+
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ptbstats.BaseStats.block_stats">
 <span class="sig-name descname"><span class="pre">block_stats</span></span><a class="headerlink" href="#ptbstats.BaseStats.block_stats" title="Permalink to this definition">#</a></dt>
 <dd><p>Whether the <a class="reference internal" href="#ptbstats.BaseStats.process_update" title="ptbstats.BaseStats.process_update"><code class="xref py py-meth docutils literal notranslate"><span class="pre">process_update()</span></code></a> should be run blocking.</p>
 </dd></dl>
+
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ptbstats.BaseStats.block_command">
 <span class="sig-name descname"><span class="pre">block_command</span></span><a class="headerlink" href="#ptbstats.BaseStats.block_command" title="Permalink to this definition">#</a></dt>
 <dd><p>Whether <a class="reference internal" href="#ptbstats.BaseStats.reply_statistics" title="ptbstats.BaseStats.reply_statistics"><code class="xref py py-meth docutils literal notranslate"><span class="pre">reply_statistics()</span></code></a> should be run blocking.</p>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="ptbstats.BaseStats.check_update">
 <em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">check_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ptbstats.BaseStats.check_update" title="Permalink to this definition">#</a></dt>
@@ -261,6 +265,7 @@ otherwise.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="ptbstats.BaseStats.load_data">
 <em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">application</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ptbstats.BaseStats.load_data" title="Permalink to this definition">#</a></dt>
@@ -276,6 +281,7 @@ persistence. If you don’t use persistence, just <code class="docutils literal 
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="ptbstats.BaseStats.process_update">
 <em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">process_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ptbstats.BaseStats.process_update" title="Permalink to this definition">#</a></dt>
@@ -292,6 +298,7 @@ should be independent from it.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="ptbstats.BaseStats.reply_statistics">
 <em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reply_statistics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ptbstats.BaseStats.reply_statistics" title="Permalink to this definition">#</a></dt>
@@ -310,6 +317,7 @@ status of the statistics in an appropriate manner.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="ptbstats.BaseStats.store_data">
 <em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">store_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ptbstats.BaseStats.store_data" title="Permalink to this definition">#</a></dt>
@@ -324,7 +332,9 @@ in <code class="docutils literal notranslate"><span class="pre">context.bot_data
 </dd>
 </dl>
 </dd></dl>
+
 </dd></dl>
+
 </section>
 
         </article>

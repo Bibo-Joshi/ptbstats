@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="ptbstats package" href="ptbstats.html" />
 
-    <link rel="shortcut icon" href="_static/ptb_stats.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
+    <link rel="shortcut icon" href="_static/ptb_stats.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2022.06.21"/>
         <title>PTB Stats 2.0.2 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -184,7 +184,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -200,10 +201,10 @@
         <article role="main">
           <section id="ptb-stats">
 <h1>PTB Stats<a class="headerlink" href="#ptb-stats" title="Permalink to this headline">#</a></h1>
-<a class="reference external image-reference" href="https://www.python.org/doc/versions/"><img alt="Supported Python versions" src="https://img.shields.io/badge/python-3.7+-blue"/></a>
-<a class="reference external image-reference" href="https://python-telegram-bot.org/"><img alt="Supported PTB versions" src="https://img.shields.io/badge/python--telegram--bot-20.0a0-blue"/></a>
-<a class="reference external image-reference" href="https://Bibo-Joshi.github.io/ptbstats/"><img alt="Documentation" src="https://img.shields.io/badge/documentation-is%20here-orange"/></a>
-<a class="reference external image-reference" href="https://results.pre-commit.ci/latest/github/Bibo-Joshi/ptbstats/master"><img alt="pre-commit.ci status" src="https://results.pre-commit.ci/badge/github/Bibo-Joshi/ptbstats/master.svg"/></a>
+<a class="reference external image-reference" href="https://www.python.org/doc/versions/"><img alt="Supported Python versions" src="https://img.shields.io/badge/python-3.7+-blue" /></a>
+<a class="reference external image-reference" href="https://python-telegram-bot.org/"><img alt="Supported PTB versions" src="https://img.shields.io/badge/python--telegram--bot-20.0a0-blue" /></a>
+<a class="reference external image-reference" href="https://Bibo-Joshi.github.io/ptbstats/"><img alt="Documentation" src="https://img.shields.io/badge/documentation-is%20here-orange" /></a>
+<a class="reference external image-reference" href="https://results.pre-commit.ci/latest/github/Bibo-Joshi/ptbstats/master"><img alt="pre-commit.ci status" src="https://results.pre-commit.ci/badge/github/Bibo-Joshi/ptbstats/master.svg" /></a>
 <p>A simple statistics plugin for Telegram bots build with the python-telegram-bot library</p>
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h2>
@@ -222,20 +223,20 @@
 
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="sd">"""Start the bot."""</span>
-    <span class="n">persistence</span> <span class="o">=</span> <span class="n">PicklePersistence</span><span class="p">(</span><span class="s2">"persistence.pickle"</span><span class="p">)</span>
-    <span class="n">application</span> <span class="o">=</span> <span class="n">Application</span><span class="o">.</span><span class="n">builder</span><span class="p">()</span><span class="o">.</span><span class="n">token</span><span class="p">(</span><span class="s2">"TOKEN"</span><span class="p">)</span><span class="o">.</span><span class="n">persistence</span><span class="p">(</span><span class="n">persistence</span><span class="p">)</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>
+    <span class="sd">&quot;&quot;&quot;Start the bot.&quot;&quot;&quot;</span>
+    <span class="n">persistence</span> <span class="o">=</span> <span class="n">PicklePersistence</span><span class="p">(</span><span class="s2">&quot;persistence.pickle&quot;</span><span class="p">)</span>
+    <span class="n">application</span> <span class="o">=</span> <span class="n">Application</span><span class="o">.</span><span class="n">builder</span><span class="p">()</span><span class="o">.</span><span class="n">token</span><span class="p">(</span><span class="s2">&quot;TOKEN&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">persistence</span><span class="p">(</span><span class="n">persistence</span><span class="p">)</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>
 
     <span class="c1"># Set up stats</span>
     <span class="n">set_application</span><span class="p">(</span><span class="n">application</span><span class="p">)</span>
     <span class="c1"># Count number of text messages</span>
     <span class="n">register_stats</span><span class="p">(</span>
         <span class="n">SimpleStats</span><span class="p">(</span>
-            <span class="s2">"text"</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">u</span><span class="p">:</span> <span class="nb">bool</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">message</span> <span class="ow">and</span> <span class="p">(</span><span class="n">filters</span><span class="o">.</span><span class="n">TEXT</span> <span class="o">&amp;</span> <span class="o">~</span><span class="n">filters</span><span class="o">.</span><span class="n">COMMAND</span><span class="p">)</span><span class="o">.</span><span class="n">check_update</span><span class="p">(</span><span class="n">u</span><span class="p">))</span>
+            <span class="s2">&quot;text&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">u</span><span class="p">:</span> <span class="nb">bool</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">message</span> <span class="ow">and</span> <span class="p">(</span><span class="n">filters</span><span class="o">.</span><span class="n">TEXT</span> <span class="o">&amp;</span> <span class="o">~</span><span class="n">filters</span><span class="o">.</span><span class="n">COMMAND</span><span class="p">)</span><span class="o">.</span><span class="n">check_update</span><span class="p">(</span><span class="n">u</span><span class="p">))</span>
         <span class="p">)</span>
     <span class="p">)</span>
     <span class="c1"># Count number of inline queries</span>
-    <span class="n">register_stats</span><span class="p">(</span><span class="n">SimpleStats</span><span class="p">(</span><span class="s2">"ilq"</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">u</span><span class="p">:</span> <span class="nb">bool</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">inline_query</span> <span class="ow">and</span> <span class="n">u</span><span class="o">.</span><span class="n">inline_query</span><span class="o">.</span><span class="n">query</span><span class="p">)))</span>
+    <span class="n">register_stats</span><span class="p">(</span><span class="n">SimpleStats</span><span class="p">(</span><span class="s2">&quot;ilq&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">u</span><span class="p">:</span> <span class="nb">bool</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">inline_query</span> <span class="ow">and</span> <span class="n">u</span><span class="o">.</span><span class="n">inline_query</span><span class="o">.</span><span class="n">query</span><span class="p">)))</span>
 
     <span class="c1"># Register handlers</span>
     <span class="k">async</span> <span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
@@ -247,7 +248,7 @@
     <span class="n">application</span><span class="o">.</span><span class="n">run_polling</span><span class="p">()</span>
 
 
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">main</span><span class="p">()</span>
 </pre></div>
 </div>
