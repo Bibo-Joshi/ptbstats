@@ -1,11 +1,11 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Changelog" href="changelog.html" /><link rel="prev" title="ptbstats.BaseStats" href="ptbstats.basestats.html" />
 
-    <link rel="shortcut icon" href="_static/ptb_stats.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2022.06.21"/>
+    <link rel="shortcut icon" href="_static/ptb_stats.ico"/><meta name="generator" content="sphinx-5.0.2, furo 2022.06.21"/>
         <title>ptbstats.SimpleStats - PTB Stats 2.0.2 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
@@ -200,14 +200,14 @@
         </div>
         <article role="main">
           <section id="ptbstats-simplestats">
-<h1>ptbstats.SimpleStats<a class="headerlink" href="#ptbstats-simplestats" title="Permalink to this headline">#</a></h1>
+<h1>ptbstats.SimpleStats<a class="headerlink" href="#ptbstats-simplestats" title="Permalink to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ptbstats.SimpleStats">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ptbstats.</span></span><span class="sig-name descname"><span class="pre">SimpleStats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_update</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ptbstats.SimpleStats" title="Permalink to this definition">#</a></dt>
 <dd><p>Simple implementation of <a class="reference internal" href="ptbstats.basestats.html#ptbstats.BaseStats" title="ptbstats.BaseStats"><code class="xref py py-class docutils literal notranslate"><span class="pre">ptbstats.BaseStats</span></code></a> collecting records per day and user.
 The command callback will run non-blocking.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>command</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – The command that should produce the statistics associated with this instance.</p></li>
 <li><p><strong>check_update</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.10)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code></a>[[<a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a>], <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>]]) – A callable that determines, if an update should be handled or not. See
@@ -234,7 +234,7 @@ on that day. <code class="docutils literal notranslate"><span class="pre">querie
 <span class="sig-name descname"><span class="pre">check_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ptbstats.SimpleStats.check_update" title="Permalink to this definition">#</a></dt>
 <dd><p>See <a class="reference internal" href="ptbstats.basestats.html#ptbstats.BaseStats.check_update" title="ptbstats.BaseStats.check_update"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ptbstats.BaseStats.check_update()</span></code></a>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>]</p>
 </dd>
 </dl>
@@ -247,7 +247,7 @@ on that day. <code class="docutils literal notranslate"><span class="pre">querie
 Assumes that <code class="docutils literal notranslate"><span class="pre">context.bot_data</span></code> is a dict and loads the data from
 <code class="docutils literal notranslate"><span class="pre">application.bot_data['SimpleStats']</span></code>. Override to customize the behavior.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 </dl>
@@ -258,10 +258,10 @@ Assumes that <code class="docutils literal notranslate"><span class="pre">contex
 <em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">process_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ptbstats.SimpleStats.process_update" title="Permalink to this definition">#</a></dt>
 <dd><p>Records the update.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>update</strong> (<a class="reference external" href="https://docs.python-telegram-bot.org/en/v20.0a0/telegram.update.html#telegram.Update" title="(in python-telegram-bot v20.0a0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Update</span></code></a>) – The <a class="reference external" href="https://docs.python-telegram-bot.org/en/v20.0a0/telegram.update.html#telegram.Update" title="(in python-telegram-bot v20.0a0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">telegram.Update</span></code></a>.</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 </dl>
@@ -273,13 +273,13 @@ Assumes that <code class="docutils literal notranslate"><span class="pre">contex
 <dd><p>Sends one HTML-file with the two graphs of number of users per day and number of queries
 per day as reply.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>update</strong> (<a class="reference external" href="https://docs.python-telegram-bot.org/en/v20.0a0/telegram.update.html#telegram.Update" title="(in python-telegram-bot v20.0a0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Update</span></code></a>) – The <a class="reference external" href="https://docs.python-telegram-bot.org/en/v20.0a0/telegram.update.html#telegram.Update" title="(in python-telegram-bot v20.0a0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">telegram.Update</span></code></a>.</p></li>
 <li><p><strong>context</strong> (<a class="reference external" href="https://docs.python-telegram-bot.org/en/v20.0a0/telegram.ext.callbackcontext.html#telegram.ext.CallbackContext" title="(in python-telegram-bot v20.0a0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">CallbackContext</span></code></a>) – The <a class="reference external" href="https://docs.python-telegram-bot.org/en/v20.0a0/telegram.ext.callbackcontext.html#telegram.ext.CallbackContext" title="(in python-telegram-bot v20.0a0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">telegram.ext.CallbackContext</span></code></a></p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 </dl>
@@ -292,7 +292,7 @@ per day as reply.</p>
 Assumes that <code class="docutils literal notranslate"><span class="pre">context.bot_data</span></code> is a dict and stores the data in
 <code class="docutils literal notranslate"><span class="pre">context.bot_data['SimpleStats']</span></code>. Override to customize the behavior.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 </dl>
@@ -356,6 +356,7 @@ Assumes that <code class="docutils literal notranslate"><span class="pre">contex
 </div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/scripts/furo.js"></script>
     </body>
