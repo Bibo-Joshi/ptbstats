@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="ptbstats.SimpleStats" href="ptbstats.simplestats.html" /><link rel="prev" title="ptbstats package" href="ptbstats.html" />
 
-    <link rel="shortcut icon" href="_static/ptb_stats.ico"/><meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/>
+    <link rel="shortcut icon" href="_static/ptb_stats.ico"/><meta name="generator" content="sphinx-5.2.3, furo 2022.06.21"/>
         <title>ptbstats.BaseStats - PTB Stats 2.0.2 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
@@ -134,7 +134,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -193,7 +193,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -382,8 +382,37 @@ in <code class="docutils literal notranslate"><span class="pre">context.bot_data
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">ptbstats.BaseStats</a><ul>
+<li><a class="reference internal" href="#ptbstats.BaseStats"><code class="docutils literal notranslate"><span class="pre">BaseStats</span></code></a><ul>
+<li><a class="reference internal" href="#ptbstats.BaseStats.command"><code class="docutils literal notranslate"><span class="pre">BaseStats.command</span></code></a></li>
+<li><a class="reference internal" href="#ptbstats.BaseStats.block_stats"><code class="docutils literal notranslate"><span class="pre">BaseStats.block_stats</span></code></a></li>
+<li><a class="reference internal" href="#ptbstats.BaseStats.block_command"><code class="docutils literal notranslate"><span class="pre">BaseStats.block_command</span></code></a></li>
+<li><a class="reference internal" href="#ptbstats.BaseStats.check_update"><code class="docutils literal notranslate"><span class="pre">BaseStats.check_update()</span></code></a></li>
+<li><a class="reference internal" href="#ptbstats.BaseStats.load_data"><code class="docutils literal notranslate"><span class="pre">BaseStats.load_data()</span></code></a></li>
+<li><a class="reference internal" href="#ptbstats.BaseStats.process_update"><code class="docutils literal notranslate"><span class="pre">BaseStats.process_update()</span></code></a></li>
+<li><a class="reference internal" href="#ptbstats.BaseStats.reply_statistics"><code class="docutils literal notranslate"><span class="pre">BaseStats.reply_statistics()</span></code></a></li>
+<li><a class="reference internal" href="#ptbstats.BaseStats.store_data"><code class="docutils literal notranslate"><span class="pre">BaseStats.store_data()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
@@ -393,6 +422,7 @@ in <code class="docutils literal notranslate"><span class="pre">context.bot_data
     <script src="_static/underscore.js"></script>
     <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/scripts/furo.js"></script>
     </body>
 </html>

@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="ptbstats package" href="ptbstats.html" />
 
-    <link rel="shortcut icon" href="_static/ptb_stats.ico"/><meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/>
+    <link rel="shortcut icon" href="_static/ptb_stats.ico"/><meta name="generator" content="sphinx-5.2.3, furo 2022.06.21"/>
         <title>PTB Stats 2.0.2 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
@@ -264,8 +264,35 @@
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="ptbstats.html">ptbstats package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="ptbstats.basestats.html">ptbstats.BaseStats</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ptbstats.simplestats.html">ptbstats.SimpleStats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ptbstats.basestats.html">ptbstats.BaseStats</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ptbstats.basestats.html#ptbstats.BaseStats"><code class="docutils literal notranslate"><span class="pre">BaseStats</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ptbstats.basestats.html#ptbstats.BaseStats.command"><code class="docutils literal notranslate"><span class="pre">BaseStats.command</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ptbstats.basestats.html#ptbstats.BaseStats.block_stats"><code class="docutils literal notranslate"><span class="pre">BaseStats.block_stats</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ptbstats.basestats.html#ptbstats.BaseStats.block_command"><code class="docutils literal notranslate"><span class="pre">BaseStats.block_command</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ptbstats.basestats.html#ptbstats.BaseStats.check_update"><code class="docutils literal notranslate"><span class="pre">BaseStats.check_update()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ptbstats.basestats.html#ptbstats.BaseStats.load_data"><code class="docutils literal notranslate"><span class="pre">BaseStats.load_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ptbstats.basestats.html#ptbstats.BaseStats.process_update"><code class="docutils literal notranslate"><span class="pre">BaseStats.process_update()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ptbstats.basestats.html#ptbstats.BaseStats.reply_statistics"><code class="docutils literal notranslate"><span class="pre">BaseStats.reply_statistics()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ptbstats.basestats.html#ptbstats.BaseStats.store_data"><code class="docutils literal notranslate"><span class="pre">BaseStats.store_data()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ptbstats.simplestats.html">ptbstats.SimpleStats</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ptbstats.simplestats.html#ptbstats.SimpleStats"><code class="docutils literal notranslate"><span class="pre">SimpleStats</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ptbstats.simplestats.html#ptbstats.SimpleStats.command"><code class="docutils literal notranslate"><span class="pre">SimpleStats.command</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ptbstats.simplestats.html#ptbstats.SimpleStats.records"><code class="docutils literal notranslate"><span class="pre">SimpleStats.records</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ptbstats.simplestats.html#ptbstats.SimpleStats.check_update"><code class="docutils literal notranslate"><span class="pre">SimpleStats.check_update()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ptbstats.simplestats.html#ptbstats.SimpleStats.load_data"><code class="docutils literal notranslate"><span class="pre">SimpleStats.load_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ptbstats.simplestats.html#ptbstats.SimpleStats.process_update"><code class="docutils literal notranslate"><span class="pre">SimpleStats.process_update()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ptbstats.simplestats.html#ptbstats.SimpleStats.reply_statistics"><code class="docutils literal notranslate"><span class="pre">SimpleStats.reply_statistics()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ptbstats.simplestats.html#ptbstats.SimpleStats.store_data"><code class="docutils literal notranslate"><span class="pre">SimpleStats.store_data()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ptbstats.html#ptbstats.set_application"><code class="docutils literal notranslate"><span class="pre">set_application()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ptbstats.html#ptbstats.register_stats"><code class="docutils literal notranslate"><span class="pre">register_stats()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -344,6 +371,7 @@
     <script src="_static/underscore.js"></script>
     <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/scripts/furo.js"></script>
     </body>
 </html>
