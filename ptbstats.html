@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="ptbstats.BaseStats" href="ptbstats.basestats.html" /><link rel="prev" title="PTB Stats" href="index.html" />
 
-    <link rel="shortcut icon" href="_static/ptb_stats.ico"/><meta name="generator" content="sphinx-5.3.0, furo 2022.09.29"/>
-        <title>ptbstats package - PTB Stats 2.0.2 documentation</title>
+    <link rel="shortcut icon" href="_static/ptb_stats.ico"/><!-- Generated with Sphinx 6.1.1 and Furo 2022.12.07 -->
+        <title>ptbstats package - PTB Stats 2.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">PTB Stats 2.0.2 documentation</div></a>
+      <a href="index.html"><div class="brand">PTB Stats 2.1 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -143,16 +143,16 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="index.html">
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
   <div class="sidebar-logo-container">
     <img class="sidebar-logo" src="_static/ptb_stats_no_background.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">PTB Stats 2.0.2 documentation</span>
+  <span class="sidebar-brand-text">PTB Stats 2.1 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
-  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
@@ -239,7 +239,7 @@
 <dd><p>Set the application to be used with <code class="docutils literal notranslate"><span class="pre">ptbstats</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>application</strong> (<a class="reference external" href="https://docs.python-telegram-bot.org/en/v20.0a0/telegram.ext.application.html#telegram.ext.Application" title="(in python-telegram-bot v20.0a0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Application</span></code></a>) – The <a class="reference external" href="https://docs.python-telegram-bot.org/en/v20.0a0/telegram.ext.application.html#telegram.ext.Application" title="(in python-telegram-bot v20.0a0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">telegram.ext.Application</span></code></a>.</p>
+<dd class="field-odd"><p><strong>application</strong> (<a class="reference external" href="https://docs.python-telegram-bot.org/en/stable/telegram.ext.application.html#telegram.ext.Application" title="(in python-telegram-bot v20.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Application</span></code></a>) – The <a class="reference external" href="https://docs.python-telegram-bot.org/en/stable/telegram.ext.application.html#telegram.ext.Application" title="(in python-telegram-bot v20.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">telegram.ext.Application</span></code></a>.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
@@ -253,12 +253,9 @@
 <dd><p>Register a statistics instance. This will register two handlers on the application set with
 <a class="reference internal" href="#ptbstats.set_application" title="ptbstats.set_application"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_application()</span></code></a>:</p>
 <ol class="arabic simple">
-<li><dl class="simple">
-<dt>The <code class="docutils literal notranslate"><span class="pre">stats</span></code> handler. By default, each of those handlers will get it’s own group,</dt><dd><p>starting with -10e10. That should be enough to not interfere with your other handlers.</p>
-</dd>
-</dl>
-</li>
-<li><p>A <a class="reference external" href="https://docs.python-telegram-bot.org/en/v20.0a0/telegram.ext.commandhandler.html#telegram.ext.CommandHandler" title="(in python-telegram-bot v20.0a0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">telegram.ext.CommandHandler</span></code></a> that will listen for <code class="docutils literal notranslate"><span class="pre">command</span></code> and call
+<li><p>The <code class="docutils literal notranslate"><span class="pre">stats</span></code> handler. By default, each of those handlers will get it’s own group,
+starting with -10e10. That should be enough to not interfere with your other handlers.</p></li>
+<li><p>A <a class="reference external" href="https://docs.python-telegram-bot.org/en/stable/telegram.ext.commandhandler.html#telegram.ext.CommandHandler" title="(in python-telegram-bot v20.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">telegram.ext.CommandHandler</span></code></a> that will listen for <code class="docutils literal notranslate"><span class="pre">command</span></code> and call
 <code class="docutils literal notranslate"><span class="pre">stats.reply_statistics</span></code> to report the current statistics. By default, all those
 command handlers will be added to group 0. If you register the statistics before your other
 handlers, that should usually be enough to make sure that the command will not be caught by
@@ -269,7 +266,7 @@ other handlers.</p></li>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>stats</strong> (<a class="reference internal" href="ptbstats.basestats.html#ptbstats.BaseStats" title="ptbstats._basestats.BaseStats"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseStats</span></code></a>) – The statistics instance to be added.</p></li>
-<li><p><strong>admin_id</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.11)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>], <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>]) – Optional. If passed, only the admin/s with the corresponding user ids will be
+<li><p><strong>admin_id</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.11)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Sequence" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>], <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>]) – Optional. If passed, only the admin/s with the corresponding user ids will be
 allowed to query the statistics.</p></li>
 <li><p><strong>stats_group</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.11)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>]) – Optional. The group to register the statistics handler to instead of the
 default.</p></li>
@@ -314,7 +311,7 @@ default.</p></li>
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2020, Hinrich Mahler
+                Copyright &#169; 2020-2023, Hinrich Mahler
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             
@@ -322,9 +319,7 @@ default.</p></li>
             
           </div>
           <div class="right-details">
-            <div class="icons">
-              
-            </div>
+            
           </div>
         </div>
         
@@ -357,9 +352,6 @@ default.</p></li>
     </aside>
   </div>
 </div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/scripts/furo.js"></script>
