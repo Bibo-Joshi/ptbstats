@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """Module providing the :meth:`register_stats` method."""
-from typing import List, Union
+from typing import Sequence, Union
 
 from telegram.ext import Application, CommandHandler, filters
 
@@ -19,7 +19,7 @@ def set_application(application: Application) -> None:
 
 def register_stats(
     stats: BaseStats,
-    admin_id: Union[int, List[int]] = None,
+    admin_id: Union[int, Sequence[int]] = None,
     stats_group: int = None,
     command_group: int = None,
 ) -> None:
@@ -28,7 +28,7 @@ def register_stats(
     :meth:`set_application`:
 
     1. The ``stats`` handler. By default, each of those handlers will get it's own group,
-        starting with -10e10. That should be enough to not interfere with your other handlers.
+       starting with -10e10. That should be enough to not interfere with your other handlers.
     2. A :class:`telegram.ext.CommandHandler` that will listen for ``command`` and call
        ``stats.reply_statistics`` to report the current statistics. By default, all those
        command handlers will be added to group 0. If you register the statistics before your other

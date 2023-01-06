@@ -2,13 +2,21 @@
 Changelog
 =========
 
+Version 2.1
+===========
+*Released 2013-01-06*
+
+* Upgrades ``python-telegram-bot`` to ``~=20.0``
+* Upgrades ``plotly`` to ``~=5.11``
+* Fix a bug where all ``SimpleStats`` instances would override each other's stored data
+
 Version 2.0.2
 =============
 *Released 2022-05-22*
 
 * Fix a bug in ``SimpleStats``
 
-Version 2.0.2
+Version 2.0.1
 =============
 *Released 2022-05-22*
 

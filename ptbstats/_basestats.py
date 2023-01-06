@@ -4,12 +4,12 @@ from abc import ABC, abstractmethod
 from typing import Any, Optional, TypeVar
 
 from telegram import Update
-from telegram.ext import Application, CallbackContext, Handler
+from telegram.ext import Application, BaseHandler, CallbackContext
 
 _CCT = TypeVar("_CCT", bound=CallbackContext)
 
 
-class BaseStats(Handler[Update, _CCT], ABC):
+class BaseStats(BaseHandler[Update, _CCT], ABC):
     """Base class for storing and displaying statistics.
 
     Warning:

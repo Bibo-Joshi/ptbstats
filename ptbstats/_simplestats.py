@@ -143,20 +143,25 @@ class SimpleStats(BaseStats[_CCT]):
         stream.seek(0)
 
         await update.effective_message.reply_document(  # type: ignore[union-attr]
-            stream.read().encode("utf-8"), filename=f"{self.command}.html"
+            stream.read().encode("utf-8"),
+            filename=f"{self.command}.html",
+            read_timeout=60,
+            write_timeout=60,
         )
 
     def store_data(self, context: _CCT) -> None:
         """Persists :attr:`records`.
         Assumes that ``context.bot_data`` is a dict and stores the data in
-        ``context.bot_data['SimpleStats']``. Override to customize the behavior.
+        ``context.bot_data['SimpleStats'][self.command]``. Override to customize the behavior.
         """
-        context.bot_data["SimpleStats"] = self.records
+        context.bot_data["SimpleStats"][self.command] = self.records
 
     def load_data(self, application: Application[Any, _CCT, Any, Any, Any, Any]) -> None:
         """Loads the data stored by :meth:`store_data`.
         Assumes that ``context.bot_data`` is a dict and loads the data from
         ``application.bot_data['SimpleStats']``. Override to customize the behavior.
         """
-        if "SimpleStats" in application.bot_data:
-            self.records = application.bot_data["SimpleStats"]
+        try:
+            self.records = application.bot_data["SimpleStats"][self.command]
+        except KeyError:
+            pass

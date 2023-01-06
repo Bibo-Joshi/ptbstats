@@ -19,11 +19,11 @@ sys.path.insert(0, os.path.abspath("../.."))
 # -- Project information -----------------------------------------------------
 
 project = "PTB Stats"
-copyright = "2020, Hinrich Mahler"
+copyright = "2020-2023, Hinrich Mahler"
 author = "Hinrich Mahler"
 master_doc = "index"
-version = "2.0.2"
-release = "2.0.2"
+version = "2.1"
+release = "2.1"
 
 
 # -- General configuration ---------------------------------------------------
@@ -41,7 +41,7 @@ extensions = [
 
 # Use intersphinx to reference the python-telegram-bot docs
 intersphinx_mapping = {
-    "telegram": ("https://python-telegram-bot.readthedocs.io/en/v20.0a0/", None),
+    "telegram": ("https://python-telegram-bot.readthedocs.io/en/stable/", None),
     "https://docs.python.org/": None,
 }
 
