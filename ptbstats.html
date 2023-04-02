@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="ptbstats.BaseStats" href="ptbstats.basestats.html" /><link rel="prev" title="PTB Stats" href="index.html" />
 
-    <link rel="shortcut icon" href="_static/ptb_stats.ico"/><!-- Generated with Sphinx 6.1.3 and Furo 2022.12.07 -->
+    <link rel="shortcut icon" href="_static/ptb_stats.ico"/><!-- Generated with Sphinx 6.1.3 and Furo 2023.03.27 -->
         <title>ptbstats package - PTB Stats 2.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=fad236701ea90a88636c2a8c73b44ae642ed2a53" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -239,7 +239,7 @@
 <dd><p>Set the application to be used with <code class="docutils literal notranslate"><span class="pre">ptbstats</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>application</strong> (<a class="reference external" href="https://docs.python-telegram-bot.org/en/stable/telegram.ext.application.html#telegram.ext.Application" title="(in python-telegram-bot v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Application</span></code></a>) – The <a class="reference external" href="https://docs.python-telegram-bot.org/en/stable/telegram.ext.application.html#telegram.ext.Application" title="(in python-telegram-bot v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">telegram.ext.Application</span></code></a>.</p>
+<dd class="field-odd"><p><strong>application</strong> (<a class="reference external" href="https://docs.python-telegram-bot.org/en/stable/telegram.ext.application.html#telegram.ext.Application" title="(in python-telegram-bot v20.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Application</span></code></a>) – The <a class="reference external" href="https://docs.python-telegram-bot.org/en/stable/telegram.ext.application.html#telegram.ext.Application" title="(in python-telegram-bot v20.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">telegram.ext.Application</span></code></a>.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
@@ -255,7 +255,7 @@
 <ol class="arabic simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">stats</span></code> handler. By default, each of those handlers will get it’s own group,
 starting with -10e10. That should be enough to not interfere with your other handlers.</p></li>
-<li><p>A <a class="reference external" href="https://docs.python-telegram-bot.org/en/stable/telegram.ext.commandhandler.html#telegram.ext.CommandHandler" title="(in python-telegram-bot v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">telegram.ext.CommandHandler</span></code></a> that will listen for <code class="docutils literal notranslate"><span class="pre">command</span></code> and call
+<li><p>A <a class="reference external" href="https://docs.python-telegram-bot.org/en/stable/telegram.ext.commandhandler.html#telegram.ext.CommandHandler" title="(in python-telegram-bot v20.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">telegram.ext.CommandHandler</span></code></a> that will listen for <code class="docutils literal notranslate"><span class="pre">command</span></code> and call
 <code class="docutils literal notranslate"><span class="pre">stats.reply_statistics</span></code> to report the current statistics. By default, all those
 command handlers will be added to group 0. If you register the statistics before your other
 handlers, that should usually be enough to make sure that the command will not be caught by
