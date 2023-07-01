@@ -1,2 +1,2 @@
 python-telegram-bot~=20.0
-plotly~=5.14
+plotly~=5.15
