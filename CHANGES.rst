@@ -2,9 +2,17 @@
 Changelog
 =========
 
+Version 2.2
+===========
+*Released 2023-09-02*
+
+* Upgrades ``python-telegram-bot`` to ``~=20.4``
+* Upgrades ``plotly`` to ``~=5.16``
+* Fixes smaller bugs
+
 Version 2.1
 ===========
-*Released 2013-01-06*
+*Released 2023-01-06*
 
 * Upgrades ``python-telegram-bot`` to ``~=20.0``
 * Upgrades ``plotly`` to ``~=5.11``
