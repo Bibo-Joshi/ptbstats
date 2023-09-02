@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 """Base class for storing and displaying statistics."""
 from abc import ABC, abstractmethod
-from typing import Any, Optional, TypeVar
+from typing import Any, Optional, Type, TypeVar
 
 from telegram import Update
 from telegram.ext import Application, BaseHandler, CallbackContext
 
 _CCT = TypeVar("_CCT", bound=CallbackContext)
+_T = TypeVar("_T", bound="BaseStats")
 
 
 class BaseStats(BaseHandler[Update, _CCT], ABC):
@@ -28,14 +29,14 @@ class BaseStats(BaseHandler[Update, _CCT], ABC):
         block_command: Whether :meth:`reply_statistics` should be run blocking.
     """
 
-    def __new__(cls, *args, **kwargs):  # type: ignore
-        instance = super().__new__(cls, *args, **kwargs)
+    def __new__(cls: Type[_T], *_: Any, **__: Any) -> _T:
+        instance = super().__new__(cls)
         orig_check_update = instance.check_update
 
-        def check_update(update: Update) -> Optional[bool]:
+        def check_update(update: object) -> Optional[bool]:
             return isinstance(update, Update) and orig_check_update(update)
 
-        instance.check_update = check_update
+        instance.check_update = check_update  # type: ignore[method-assign]
         return instance
 
     def __init__(self, command: str, block_stats: bool = True, block_command: bool = True):

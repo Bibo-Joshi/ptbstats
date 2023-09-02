@@ -154,7 +154,7 @@ class SimpleStats(BaseStats[_CCT]):
         Assumes that ``context.bot_data`` is a dict and stores the data in
         ``context.bot_data['SimpleStats'][self.command]``. Override to customize the behavior.
         """
-        context.bot_data["SimpleStats"][self.command] = self.records
+        context.bot_data.setdefault("SimpleStats", {})[self.command] = self.records
 
     def load_data(self, application: Application[Any, _CCT, Any, Any, Any, Any]) -> None:
         """Loads the data stored by :meth:`store_data`.

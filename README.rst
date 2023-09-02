@@ -35,26 +35,27 @@ Here is an example setup using the very basic `SimpleStats <https://Bibo-Joshi.g
 
 .. code-block:: python
 
-    #!/usr/bin/env python3
     from telegram.ext import Application, PicklePersistence, filters, MessageHandler
     from ptbstats import set_application, register_stats, SimpleStats
 
 
     def main():
         """Start the bot."""
-        persistence = PicklePersistence("persistence.pickle")
-        application = Application.builder().token("TOKEN").persistence(persistence).build()
 
-        # Set up stats
-        set_application(application)
-        # Count number of text messages
-        register_stats(
-            SimpleStats(
-                "text", lambda u: bool(u.message and (filters.TEXT & ~filters.COMMAND).check_update(u))
+        async def post_init(app):
+            # Set up stats
+            set_application(application)
+            # Count number of text messages
+            register_stats(
+                SimpleStats(
+                    "text", lambda u: bool(u.message and (filters.TEXT & ~filters.COMMAND).check_update(u))
+                )
             )
-        )
-        # Count number of inline queries
-        register_stats(SimpleStats("ilq", lambda u: bool(u.inline_query and u.inline_query.query)))
+            # Count number of inline queries
+            register_stats(SimpleStats("ilq", lambda u: bool(u.inline_query and u.inline_query.query)))
+
+        persistence = PicklePersistence("persistence.pickle")
+        application = Application.builder().token("TOKEN").persistence(persistence).post_init(post_init).build()
 
         # Register handlers
         async def callback(u, c):
@@ -66,8 +67,8 @@ Here is an example setup using the very basic `SimpleStats <https://Bibo-Joshi.g
         application.run_polling()
 
 
-    if __name__ == "__main__":
-        main()
+if __name__ == "__main__":
+    main()
 
 Advanced Usage
 --------------

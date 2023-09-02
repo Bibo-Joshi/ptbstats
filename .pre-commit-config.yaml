@@ -23,16 +23,16 @@ repos:
           #  run pylint across multiple cpu cores to speed it up-
           - --jobs=0 # See https://pylint.pycqa.org/en/latest/user_guide/run.html?#parallel-execution to know more
         additional_dependencies:
-          - python-telegram-bot~=20.0
-          - plotly~=5.11
+          - python-telegram-bot~=20.4
+          - plotly~=5.16
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.4.1
     hooks:
       - id: mypy
         files: ^ptbstats/.*\.py$
         additional_dependencies:
-          - python-telegram-bot~=20.0
-          - plotly~=5.11
+          - python-telegram-bot~=20.4
+          - plotly~=5.16
   - repo: https://github.com/asottile/pyupgrade
     rev: v3.10.1
     hooks:
@@ -52,5 +52,5 @@ repos:
     hooks:
       - id: ruff
         additional_dependencies:
-          - python-telegram-bot~=20.0
-          - plotly~=5.11
+          - python-telegram-bot~=20.4
+          - plotly~=5.16
