@@ -1,13 +1,13 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" data-content_root="./">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Changelog" href="changelog.html" /><link rel="prev" title="ptbstats.BaseStats" href="ptbstats.basestats.html" />
 
-    <link rel="shortcut icon" href="_static/ptb_stats.ico"/><!-- Generated with Sphinx 7.1.2 and Furo 2023.07.26 -->
+    <link rel="shortcut icon" href="_static/ptb_stats.ico"/><!-- Generated with Sphinx 7.2.5 and Furo 2023.08.19 -->
         <title>ptbstats.SimpleStats - PTB Stats 2.1 documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=362ab14a" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=36a5483c" />
     
@@ -201,10 +201,10 @@
         </div>
         <article role="main">
           <section id="ptbstats-simplestats">
-<h1>ptbstats.SimpleStats<a class="headerlink" href="#ptbstats-simplestats" title="Permalink to this heading">#</a></h1>
+<h1>ptbstats.SimpleStats<a class="headerlink" href="#ptbstats-simplestats" title="Link to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ptbstats.SimpleStats">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ptbstats.</span></span><span class="sig-name descname"><span class="pre">SimpleStats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_update</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ptbstats.SimpleStats" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ptbstats.</span></span><span class="sig-name descname"><span class="pre">SimpleStats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_update</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ptbstats.SimpleStats" title="Link to this definition">#</a></dt>
 <dd><p>Simple implementation of <a class="reference internal" href="ptbstats.basestats.html#ptbstats.BaseStats" title="ptbstats.BaseStats"><code class="xref py py-class docutils literal notranslate"><span class="pre">ptbstats.BaseStats</span></code></a> collecting records per day and user.
 The command callback will run non-blocking.</p>
 <dl class="field-list simple">
@@ -218,13 +218,13 @@ The command callback will run non-blocking.</p>
 </dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ptbstats.SimpleStats.command">
-<span class="sig-name descname"><span class="pre">command</span></span><a class="headerlink" href="#ptbstats.SimpleStats.command" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">command</span></span><a class="headerlink" href="#ptbstats.SimpleStats.command" title="Link to this definition">#</a></dt>
 <dd><p>The command that produces the statistics associated with this instance.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ptbstats.SimpleStats.records">
-<span class="sig-name descname"><span class="pre">records</span></span><a class="headerlink" href="#ptbstats.SimpleStats.records" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">records</span></span><a class="headerlink" href="#ptbstats.SimpleStats.records" title="Link to this definition">#</a></dt>
 <dd><p>For each <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.date" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.date</span></code></a>, the dict value is an object with two attributes
 <code class="docutils literal notranslate"><span class="pre">user_ids</span></code> and <code class="docutils literal notranslate"><span class="pre">queries</span></code>. <code class="docutils literal notranslate"><span class="pre">user_ids</span></code> is a set of all user ids that where recorded
 on that day. <code class="docutils literal notranslate"><span class="pre">queries</span></code> is the total amount of recorded queries on that day.</p>
@@ -232,7 +232,7 @@ on that day. <code class="docutils literal notranslate"><span class="pre">querie
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ptbstats.SimpleStats.check_update">
-<span class="sig-name descname"><span class="pre">check_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ptbstats.SimpleStats.check_update" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">check_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ptbstats.SimpleStats.check_update" title="Link to this definition">#</a></dt>
 <dd><p>See <a class="reference internal" href="ptbstats.basestats.html#ptbstats.BaseStats.check_update" title="ptbstats.BaseStats.check_update"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ptbstats.BaseStats.check_update()</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
@@ -243,7 +243,7 @@ on that day. <code class="docutils literal notranslate"><span class="pre">querie
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ptbstats.SimpleStats.load_data">
-<span class="sig-name descname"><span class="pre">load_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">application</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ptbstats.SimpleStats.load_data" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">load_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">application</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ptbstats.SimpleStats.load_data" title="Link to this definition">#</a></dt>
 <dd><p>Loads the data stored by <a class="reference internal" href="#ptbstats.SimpleStats.store_data" title="ptbstats.SimpleStats.store_data"><code class="xref py py-meth docutils literal notranslate"><span class="pre">store_data()</span></code></a>.
 Assumes that <code class="docutils literal notranslate"><span class="pre">context.bot_data</span></code> is a dict and loads the data from
 <code class="docutils literal notranslate"><span class="pre">application.bot_data['SimpleStats']</span></code>. Override to customize the behavior.</p>
@@ -256,7 +256,7 @@ Assumes that <code class="docutils literal notranslate"><span class="pre">contex
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ptbstats.SimpleStats.process_update">
-<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">process_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ptbstats.SimpleStats.process_update" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">process_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ptbstats.SimpleStats.process_update" title="Link to this definition">#</a></dt>
 <dd><p>Records the update.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -270,7 +270,7 @@ Assumes that <code class="docutils literal notranslate"><span class="pre">contex
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ptbstats.SimpleStats.reply_statistics">
-<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reply_statistics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ptbstats.SimpleStats.reply_statistics" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reply_statistics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ptbstats.SimpleStats.reply_statistics" title="Link to this definition">#</a></dt>
 <dd><p>Sends one HTML-file with the two graphs of number of users per day and number of queries
 per day as reply.</p>
 <dl class="field-list simple">
@@ -288,7 +288,7 @@ per day as reply.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ptbstats.SimpleStats.store_data">
-<span class="sig-name descname"><span class="pre">store_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ptbstats.SimpleStats.store_data" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">store_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ptbstats.SimpleStats.store_data" title="Link to this definition">#</a></dt>
 <dd><p>Persists <a class="reference internal" href="#ptbstats.SimpleStats.records" title="ptbstats.SimpleStats.records"><code class="xref py py-attr docutils literal notranslate"><span class="pre">records</span></code></a>.
 Assumes that <code class="docutils literal notranslate"><span class="pre">context.bot_data</span></code> is a dict and stores the data in
 <code class="docutils literal notranslate"><span class="pre">context.bot_data['SimpleStats'][self.command]</span></code>. Override to customize the behavior.</p>
@@ -380,9 +380,9 @@ Assumes that <code class="docutils literal notranslate"><span class="pre">contex
       
     </aside>
   </div>
-</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=3d1a5bbb"></script>
+</div><script src="_static/documentation_options.js?v=d2a6a7c0"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
-    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/furo.js?v=32e29ea5"></script>
     </body>
 </html>

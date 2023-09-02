@@ -1,13 +1,13 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" data-content_root="./">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="ptbstats.SimpleStats" href="ptbstats.simplestats.html" /><link rel="prev" title="ptbstats package" href="ptbstats.html" />
 
-    <link rel="shortcut icon" href="_static/ptb_stats.ico"/><!-- Generated with Sphinx 7.1.2 and Furo 2023.07.26 -->
+    <link rel="shortcut icon" href="_static/ptb_stats.ico"/><!-- Generated with Sphinx 7.2.5 and Furo 2023.08.19 -->
         <title>ptbstats.BaseStats - PTB Stats 2.1 documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=362ab14a" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=36a5483c" />
     
@@ -201,10 +201,10 @@
         </div>
         <article role="main">
           <section id="ptbstats-basestats">
-<h1>ptbstats.BaseStats<a class="headerlink" href="#ptbstats-basestats" title="Permalink to this heading">#</a></h1>
+<h1>ptbstats.BaseStats<a class="headerlink" href="#ptbstats-basestats" title="Link to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ptbstats.BaseStats">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ptbstats.</span></span><span class="sig-name descname"><span class="pre">BaseStats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_stats</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_command</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ptbstats.BaseStats" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ptbstats.</span></span><span class="sig-name descname"><span class="pre">BaseStats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_stats</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_command</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ptbstats.BaseStats" title="Link to this definition">#</a></dt>
 <dd><p>Base class for storing and displaying statistics.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -223,25 +223,25 @@ Defaults to <a class="reference external" href="https://docs.python.org/3/librar
 </dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ptbstats.BaseStats.command">
-<span class="sig-name descname"><span class="pre">command</span></span><a class="headerlink" href="#ptbstats.BaseStats.command" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">command</span></span><a class="headerlink" href="#ptbstats.BaseStats.command" title="Link to this definition">#</a></dt>
 <dd><p>The command that produces the statistics associated with this instance.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ptbstats.BaseStats.block_stats">
-<span class="sig-name descname"><span class="pre">block_stats</span></span><a class="headerlink" href="#ptbstats.BaseStats.block_stats" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">block_stats</span></span><a class="headerlink" href="#ptbstats.BaseStats.block_stats" title="Link to this definition">#</a></dt>
 <dd><p>Whether the <a class="reference internal" href="#ptbstats.BaseStats.process_update" title="ptbstats.BaseStats.process_update"><code class="xref py py-meth docutils literal notranslate"><span class="pre">process_update()</span></code></a> should be run blocking.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ptbstats.BaseStats.block_command">
-<span class="sig-name descname"><span class="pre">block_command</span></span><a class="headerlink" href="#ptbstats.BaseStats.block_command" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">block_command</span></span><a class="headerlink" href="#ptbstats.BaseStats.block_command" title="Link to this definition">#</a></dt>
 <dd><p>Whether <a class="reference internal" href="#ptbstats.BaseStats.reply_statistics" title="ptbstats.BaseStats.reply_statistics"><code class="xref py py-meth docutils literal notranslate"><span class="pre">reply_statistics()</span></code></a> should be run blocking.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ptbstats.BaseStats.check_update">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">check_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ptbstats.BaseStats.check_update" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">check_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ptbstats.BaseStats.check_update" title="Link to this definition">#</a></dt>
 <dd><p>This method is called to determine if an update should be processed by this statistics
 instance. It must always be overridden.</p>
 <div class="admonition note">
@@ -269,7 +269,7 @@ otherwise.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ptbstats.BaseStats.load_data">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">application</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ptbstats.BaseStats.load_data" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">application</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ptbstats.BaseStats.load_data" title="Link to this definition">#</a></dt>
 <dd><p>Will be called on startup to load the data stored by <a class="reference internal" href="#ptbstats.BaseStats.store_data" title="ptbstats.BaseStats.store_data"><code class="xref py py-meth docutils literal notranslate"><span class="pre">store_data()</span></code></a> from the
 persistence. If you don’t use persistence, just <code class="docutils literal notranslate"><span class="pre">pass</span></code>.</p>
 <dl class="field-list simple">
@@ -285,7 +285,7 @@ persistence. If you don’t use persistence, just <code class="docutils literal 
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ptbstats.BaseStats.process_update">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">process_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ptbstats.BaseStats.process_update" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">process_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ptbstats.BaseStats.process_update" title="Link to this definition">#</a></dt>
 <dd><p>This method is called on every update, that passes <a class="reference internal" href="#ptbstats.BaseStats.check_update" title="ptbstats.BaseStats.check_update"><code class="xref py py-meth docutils literal notranslate"><span class="pre">check_update()</span></code></a>. The
 <a class="reference external" href="https://docs.python-telegram-bot.org/en/stable/telegram.ext.callbackcontext.html#telegram.ext.CallbackContext" title="(in python-telegram-bot v20.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">telegram.ext.CallbackContext</span></code></a> argument is deliberately <em>not</em> passed, as this method
 should be independent from it.</p>
@@ -302,7 +302,7 @@ should be independent from it.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ptbstats.BaseStats.reply_statistics">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reply_statistics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ptbstats.BaseStats.reply_statistics" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reply_statistics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ptbstats.BaseStats.reply_statistics" title="Link to this definition">#</a></dt>
 <dd><p>This method will be used as the callback of the <a class="reference external" href="https://docs.python-telegram-bot.org/en/stable/telegram.ext.commandhandler.html#telegram.ext.CommandHandler" title="(in python-telegram-bot v20.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">telegram.ext.CommandHandler</span></code></a>
 associated with this statistics instance. It must be overridden to reply with the current
 status of the statistics in an appropriate manner.</p>
@@ -321,7 +321,7 @@ status of the statistics in an appropriate manner.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ptbstats.BaseStats.store_data">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">store_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ptbstats.BaseStats.store_data" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">store_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ptbstats.BaseStats.store_data" title="Link to this definition">#</a></dt>
 <dd><p>Will be called after handling an update. Any data that should be persisted must be stored
 in <code class="docutils literal notranslate"><span class="pre">context.bot_data</span></code>. If you don’t use persistence, just <code class="docutils literal notranslate"><span class="pre">pass</span></code>.</p>
 <dl class="field-list simple">
@@ -416,9 +416,9 @@ in <code class="docutils literal notranslate"><span class="pre">context.bot_data
       
     </aside>
   </div>
-</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=3d1a5bbb"></script>
+</div><script src="_static/documentation_options.js?v=d2a6a7c0"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
-    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/furo.js?v=32e29ea5"></script>
     </body>
 </html>

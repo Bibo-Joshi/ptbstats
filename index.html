@@ -1,13 +1,13 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" data-content_root="./">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="ptbstats package" href="ptbstats.html" />
 
-    <link rel="shortcut icon" href="_static/ptb_stats.ico"/><!-- Generated with Sphinx 7.1.2 and Furo 2023.07.26 -->
+    <link rel="shortcut icon" href="_static/ptb_stats.ico"/><!-- Generated with Sphinx 7.2.5 and Furo 2023.08.19 -->
         <title>PTB Stats 2.1 documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=362ab14a" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=36a5483c" />
     
@@ -201,14 +201,14 @@
         </div>
         <article role="main">
           <section id="ptb-stats">
-<h1>PTB Stats<a class="headerlink" href="#ptb-stats" title="Permalink to this heading">#</a></h1>
+<h1>PTB Stats<a class="headerlink" href="#ptb-stats" title="Link to this heading">#</a></h1>
 <a class="reference external image-reference" href="https://www.python.org/doc/versions/"><img alt="Supported Python versions" src="https://img.shields.io/badge/python-3.7+-blue" /></a>
 <a class="reference external image-reference" href="https://python-telegram-bot.org/"><img alt="Supported PTB versions" src="https://img.shields.io/badge/python--telegram--bot-20.0-blue" /></a>
 <a class="reference external image-reference" href="https://Bibo-Joshi.github.io/ptbstats/"><img alt="Documentation" src="https://img.shields.io/badge/documentation-is%20here-orange" /></a>
 <a class="reference external image-reference" href="https://results.pre-commit.ci/latest/github/Bibo-Joshi/ptbstats/master"><img alt="pre-commit.ci status" src="https://results.pre-commit.ci/badge/github/Bibo-Joshi/ptbstats/master.svg" /></a>
 <p>A simple statistics plugin for Telegram bots build with the python-telegram-bot library</p>
 <section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h2>
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h2>
 <p>Install via:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Bibo</span><span class="o">-</span><span class="n">Joshi</span><span class="o">/</span><span class="n">ptbstats</span><span class="o">.</span><span class="n">git</span><span class="nd">@v2</span><span class="mf">.1</span>
 </pre></div>
@@ -216,28 +216,29 @@
 <p><code class="docutils literal notranslate"><span class="pre">ptbstats</span></code> does not have a proper package (yet), because the author is too lazy for unittests and stuff …</p>
 </section>
 <section id="quickstart">
-<h2>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this heading">#</a></h2>
+<h2>Quickstart<a class="headerlink" href="#quickstart" title="Link to this heading">#</a></h2>
 <p>Here is an example setup using the very basic <a class="reference external" href="https://Bibo-Joshi.github.io/ptbstats/ptbstats.simplestats.html">SimpleStats</a> statistics instance delivered along with <code class="docutils literal notranslate"><span class="pre">ptbstats</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
-<span class="kn">from</span> <span class="nn">telegram.ext</span> <span class="kn">import</span> <span class="n">Application</span><span class="p">,</span> <span class="n">PicklePersistence</span><span class="p">,</span> <span class="n">filters</span><span class="p">,</span> <span class="n">MessageHandler</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">telegram.ext</span> <span class="kn">import</span> <span class="n">Application</span><span class="p">,</span> <span class="n">PicklePersistence</span><span class="p">,</span> <span class="n">filters</span><span class="p">,</span> <span class="n">MessageHandler</span>
 <span class="kn">from</span> <span class="nn">ptbstats</span> <span class="kn">import</span> <span class="n">set_application</span><span class="p">,</span> <span class="n">register_stats</span><span class="p">,</span> <span class="n">SimpleStats</span>
 
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Start the bot.&quot;&quot;&quot;</span>
-    <span class="n">persistence</span> <span class="o">=</span> <span class="n">PicklePersistence</span><span class="p">(</span><span class="s2">&quot;persistence.pickle&quot;</span><span class="p">)</span>
-    <span class="n">application</span> <span class="o">=</span> <span class="n">Application</span><span class="o">.</span><span class="n">builder</span><span class="p">()</span><span class="o">.</span><span class="n">token</span><span class="p">(</span><span class="s2">&quot;TOKEN&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">persistence</span><span class="p">(</span><span class="n">persistence</span><span class="p">)</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>
 
-    <span class="c1"># Set up stats</span>
-    <span class="n">set_application</span><span class="p">(</span><span class="n">application</span><span class="p">)</span>
-    <span class="c1"># Count number of text messages</span>
-    <span class="n">register_stats</span><span class="p">(</span>
-        <span class="n">SimpleStats</span><span class="p">(</span>
-            <span class="s2">&quot;text&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">u</span><span class="p">:</span> <span class="nb">bool</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">message</span> <span class="ow">and</span> <span class="p">(</span><span class="n">filters</span><span class="o">.</span><span class="n">TEXT</span> <span class="o">&amp;</span> <span class="o">~</span><span class="n">filters</span><span class="o">.</span><span class="n">COMMAND</span><span class="p">)</span><span class="o">.</span><span class="n">check_update</span><span class="p">(</span><span class="n">u</span><span class="p">))</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">post_init</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+        <span class="c1"># Set up stats</span>
+        <span class="n">set_application</span><span class="p">(</span><span class="n">application</span><span class="p">)</span>
+        <span class="c1"># Count number of text messages</span>
+        <span class="n">register_stats</span><span class="p">(</span>
+            <span class="n">SimpleStats</span><span class="p">(</span>
+                <span class="s2">&quot;text&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">u</span><span class="p">:</span> <span class="nb">bool</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">message</span> <span class="ow">and</span> <span class="p">(</span><span class="n">filters</span><span class="o">.</span><span class="n">TEXT</span> <span class="o">&amp;</span> <span class="o">~</span><span class="n">filters</span><span class="o">.</span><span class="n">COMMAND</span><span class="p">)</span><span class="o">.</span><span class="n">check_update</span><span class="p">(</span><span class="n">u</span><span class="p">))</span>
+            <span class="p">)</span>
         <span class="p">)</span>
-    <span class="p">)</span>
-    <span class="c1"># Count number of inline queries</span>
-    <span class="n">register_stats</span><span class="p">(</span><span class="n">SimpleStats</span><span class="p">(</span><span class="s2">&quot;ilq&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">u</span><span class="p">:</span> <span class="nb">bool</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">inline_query</span> <span class="ow">and</span> <span class="n">u</span><span class="o">.</span><span class="n">inline_query</span><span class="o">.</span><span class="n">query</span><span class="p">)))</span>
+        <span class="c1"># Count number of inline queries</span>
+        <span class="n">register_stats</span><span class="p">(</span><span class="n">SimpleStats</span><span class="p">(</span><span class="s2">&quot;ilq&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">u</span><span class="p">:</span> <span class="nb">bool</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">inline_query</span> <span class="ow">and</span> <span class="n">u</span><span class="o">.</span><span class="n">inline_query</span><span class="o">.</span><span class="n">query</span><span class="p">)))</span>
+
+    <span class="n">persistence</span> <span class="o">=</span> <span class="n">PicklePersistence</span><span class="p">(</span><span class="s2">&quot;persistence.pickle&quot;</span><span class="p">)</span>
+    <span class="n">application</span> <span class="o">=</span> <span class="n">Application</span><span class="o">.</span><span class="n">builder</span><span class="p">()</span><span class="o">.</span><span class="n">token</span><span class="p">(</span><span class="s2">&quot;TOKEN&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">persistence</span><span class="p">(</span><span class="n">persistence</span><span class="p">)</span><span class="o">.</span><span class="n">post_init</span><span class="p">(</span><span class="n">post_init</span><span class="p">)</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>
 
     <span class="c1"># Register handlers</span>
     <span class="k">async</span> <span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
@@ -247,20 +248,20 @@
 
     <span class="c1"># Start the Bot</span>
     <span class="n">application</span><span class="o">.</span><span class="n">run_polling</span><span class="p">()</span>
-
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">main</span><span class="p">()</span>
 </pre></div>
 </div>
+<dl class="simple">
+<dt>if __name__ == “__main__”:</dt><dd><p>main()</p>
+</dd>
+</dl>
 </section>
 <section id="advanced-usage">
-<h2>Advanced Usage<a class="headerlink" href="#advanced-usage" title="Permalink to this heading">#</a></h2>
+<h2>Advanced Usage<a class="headerlink" href="#advanced-usage" title="Link to this heading">#</a></h2>
 <p>To create your own, customized statistics, subclass <a class="reference external" href="https://Bibo-Joshi.github.io/ptbstats/ptbstats.basestats.html">BaseStats</a>.</p>
 </section>
 </section>
 <section id="reference">
-<h1>Reference<a class="headerlink" href="#reference" title="Permalink to this heading">#</a></h1>
+<h1>Reference<a class="headerlink" href="#reference" title="Link to this heading">#</a></h1>
 <p>Below you can find a reference of all the classes and methods in <code class="docutils literal notranslate"><span class="pre">ptbstats</span></code>.</p>
 <div class="toctree-wrapper compound">
 <ul>
@@ -365,9 +366,9 @@
       
     </aside>
   </div>
-</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=3d1a5bbb"></script>
+</div><script src="_static/documentation_options.js?v=d2a6a7c0"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
-    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/furo.js?v=32e29ea5"></script>
     </body>
 </html>
