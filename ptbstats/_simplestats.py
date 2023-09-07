@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+# pylint: disable=cyclic-import
 """Module containing some implementations of :class:`ptbstats.BaseStats`."""
 import asyncio
 import datetime as dtm
