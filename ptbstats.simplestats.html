@@ -210,8 +210,8 @@ The command callback will run non-blocking.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>command</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – The command that should produce the statistics associated with this instance.</p></li>
-<li><p><strong>check_update</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.11)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code></a>[[<a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a>], <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.11)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>]]) – A callable that determines, if an update should be handled or not. See
+<li><p><strong>command</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – The command that should produce the statistics associated with this instance.</p></li>
+<li><p><strong>check_update</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.12)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code></a>[[<a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a>], <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.12)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>]]) – A callable that determines, if an update should be handled or not. See
 <a class="reference internal" href="ptbstats.basestats.html#ptbstats.BaseStats.check_update" title="ptbstats.BaseStats.check_update"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ptbstats.BaseStats.check_update()</span></code></a> for the details.</p></li>
 </ul>
 </dd>
@@ -225,7 +225,7 @@ The command callback will run non-blocking.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ptbstats.SimpleStats.records">
 <span class="sig-name descname"><span class="pre">records</span></span><a class="headerlink" href="#ptbstats.SimpleStats.records" title="Link to this definition">#</a></dt>
-<dd><p>For each <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.date" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.date</span></code></a>, the dict value is an object with two attributes
+<dd><p>For each <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.date" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.date</span></code></a>, the dict value is an object with two attributes
 <code class="docutils literal notranslate"><span class="pre">user_ids</span></code> and <code class="docutils literal notranslate"><span class="pre">queries</span></code>. <code class="docutils literal notranslate"><span class="pre">user_ids</span></code> is a set of all user ids that where recorded
 on that day. <code class="docutils literal notranslate"><span class="pre">queries</span></code> is the total amount of recorded queries on that day.</p>
 </dd></dl>
@@ -236,7 +236,7 @@ on that day. <code class="docutils literal notranslate"><span class="pre">querie
 <dd><p>See <a class="reference internal" href="ptbstats.basestats.html#ptbstats.BaseStats.check_update" title="ptbstats.BaseStats.check_update"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ptbstats.BaseStats.check_update()</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.11)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>]</p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.12)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -249,7 +249,7 @@ Assumes that <code class="docutils literal notranslate"><span class="pre">contex
 <code class="docutils literal notranslate"><span class="pre">application.bot_data['SimpleStats']</span></code>. Override to customize the behavior.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -260,10 +260,10 @@ Assumes that <code class="docutils literal notranslate"><span class="pre">contex
 <dd><p>Records the update.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>update</strong> (<a class="reference external" href="https://docs.python-telegram-bot.org/en/stable/telegram.update.html#telegram.Update" title="(in python-telegram-bot v20.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Update</span></code></a>) – The <a class="reference external" href="https://docs.python-telegram-bot.org/en/stable/telegram.update.html#telegram.Update" title="(in python-telegram-bot v20.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">telegram.Update</span></code></a>.</p>
+<dd class="field-odd"><p><strong>update</strong> (<a class="reference external" href="https://docs.python-telegram-bot.org/en/stable/telegram.update.html#telegram.Update" title="(in python-telegram-bot v20.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Update</span></code></a>) – The <a class="reference external" href="https://docs.python-telegram-bot.org/en/stable/telegram.update.html#telegram.Update" title="(in python-telegram-bot v20.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">telegram.Update</span></code></a>.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -276,12 +276,12 @@ per day as reply.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>update</strong> (<a class="reference external" href="https://docs.python-telegram-bot.org/en/stable/telegram.update.html#telegram.Update" title="(in python-telegram-bot v20.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Update</span></code></a>) – The <a class="reference external" href="https://docs.python-telegram-bot.org/en/stable/telegram.update.html#telegram.Update" title="(in python-telegram-bot v20.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">telegram.Update</span></code></a>.</p></li>
-<li><p><strong>context</strong> (<a class="reference external" href="https://docs.python-telegram-bot.org/en/stable/telegram.ext.callbackcontext.html#telegram.ext.CallbackContext" title="(in python-telegram-bot v20.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">CallbackContext</span></code></a>) – The <a class="reference external" href="https://docs.python-telegram-bot.org/en/stable/telegram.ext.callbackcontext.html#telegram.ext.CallbackContext" title="(in python-telegram-bot v20.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">telegram.ext.CallbackContext</span></code></a></p></li>
+<li><p><strong>update</strong> (<a class="reference external" href="https://docs.python-telegram-bot.org/en/stable/telegram.update.html#telegram.Update" title="(in python-telegram-bot v20.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Update</span></code></a>) – The <a class="reference external" href="https://docs.python-telegram-bot.org/en/stable/telegram.update.html#telegram.Update" title="(in python-telegram-bot v20.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">telegram.Update</span></code></a>.</p></li>
+<li><p><strong>context</strong> (<a class="reference external" href="https://docs.python-telegram-bot.org/en/stable/telegram.ext.callbackcontext.html#telegram.ext.CallbackContext" title="(in python-telegram-bot v20.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">CallbackContext</span></code></a>) – The <a class="reference external" href="https://docs.python-telegram-bot.org/en/stable/telegram.ext.callbackcontext.html#telegram.ext.CallbackContext" title="(in python-telegram-bot v20.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">telegram.ext.CallbackContext</span></code></a></p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -294,7 +294,7 @@ Assumes that <code class="docutils literal notranslate"><span class="pre">contex
 <code class="docutils literal notranslate"><span class="pre">context.bot_data['SimpleStats'][self.command]</span></code>. Override to customize the behavior.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
