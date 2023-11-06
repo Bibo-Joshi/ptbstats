@@ -16,5 +16,5 @@ implicit_optional = true
 
 [tool.ruff]
 fix = false
-format = "grouped"
+output-format = "grouped"
 line-length = 99
