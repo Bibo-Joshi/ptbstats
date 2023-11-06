@@ -6,7 +6,7 @@ ci:
 
 repos:
   - repo: https://github.com/psf/black
-    rev: 23.9.1
+    rev: 23.10.1
     hooks:
       - id: black
   - repo: https://github.com/PyCQA/flake8
@@ -14,7 +14,7 @@ repos:
     hooks:
       - id: flake8
   - repo: https://github.com/PyCQA/pylint
-    rev: v3.0.0
+    rev: v3.0.1
     hooks:
       - id: pylint
         files: ^ptbstats/.*\.py$
@@ -26,7 +26,7 @@ repos:
           - python-telegram-bot~=20.4
           - plotly~=5.16
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.5.1
+    rev: v1.6.1
     hooks:
       - id: mypy
         files: ^ptbstats/.*\.py$
@@ -34,7 +34,7 @@ repos:
           - python-telegram-bot~=20.4
           - plotly~=5.16
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.14.0
+    rev: v3.15.0
     hooks:
       - id: pyupgrade
         args:
@@ -48,7 +48,7 @@ repos:
         - --diff
         - --check
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.0.292
+    rev: v0.1.4
     hooks:
       - id: ruff
         additional_dependencies:
